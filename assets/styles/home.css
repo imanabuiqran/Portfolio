@@ -69,8 +69,9 @@
 }
 
 .field textarea {
-    resize: vertical;
+    resize: none;
     min-height: 160px;
+    overflow-y: auto;
 }
 
 .field input:focus,
