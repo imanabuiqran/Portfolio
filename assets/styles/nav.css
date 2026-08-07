@@ -1,26 +1,30 @@
 nav {
-    height: 7vh;
+    height: clamp(56px, 7vh, 88px);
     width: 100%;
     background-color: white;
     position: fixed;
-    display: flex;
-    justify-content: space-between;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    box-sizing: border-box;
-    box-shadow: 0 1vh 1vw 0 rgba(0, 0, 0, 0.05);
+    padding: 0 clamp(16px, 2vw, 40px);
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
 }
 
 #R {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
-    padding: 0 20px;
-    gap: 2vw;
+    gap: clamp(12px, 1.6vw, 28px);
+    justify-self: end;
 }
 
 #R img {
-    height: 2.5vh;
-    transition: all 0.3s ease;
+    height: clamp(18px, 2.2vh, 28px);
+    width: auto;
+    transition: transform 0.3s ease;
 }
 
 #R img:hover {
@@ -30,24 +34,26 @@ nav {
 
 #L {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    padding: 0 20px;
-    gap: 2vw;
-    position: relative;
+    gap: clamp(12px, 2vw, 32px);
+    justify-self: start;
+    flex-wrap: wrap;
 }
 
 nav h1 {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    justify-self: center;
+    margin: 0;
     font-weight: 500;
-    font-size: 4vh;
+    font-size: clamp(1.25rem, 2.4vw, 2.4rem);
+    white-space: nowrap;
 }
 
 #L h2 {
     font-weight: 300;
-    font-size: 3vh;
+    font-size: clamp(0.85rem, 1.4vw, 1.35rem);
+    margin: 0;
+    white-space: nowrap;
 }
 
 #L h2 a {

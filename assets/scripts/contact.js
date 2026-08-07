@@ -75,7 +75,6 @@
         }
     }
 
-    // Clear a field's error as soon as the person starts fixing it.
     Object.values(fields).forEach(function (input) {
         input.addEventListener('input', function () {
             setFieldError(input, '');

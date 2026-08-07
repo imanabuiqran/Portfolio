@@ -1,29 +1,43 @@
 #main {
-    height: 275vh;
-    width: 89vw;
-    background-color: #ececec;
-    padding-left: 5.5vw;
-    padding-right: 5.5vw;
-    padding-top: 22vh;
+    width: 100%;
+    min-height: 100vh;
+    /* Side padding stays a true 5.5vw at every width so the content box is
+       always exactly 89vw -- the #sbs percentages below depend on that. */
+    padding: clamp(90px, 22vh, 260px) max(24px, 5.5vw) clamp(60px, 10vh, 140px);
     position: relative;
-    z-index: -1;
 }
 
 #main p {
-    font-size: 1.56vw;
+    font-size: clamp(1rem, 1.56vw, 1.87rem);
 }
 
 #main h1 {
-    font-size: 3.38vw;
+    font-size: clamp(1.9rem, 3.38vw, 4.05rem);
     font-family: "Jost_medium", sans-serif;
-}
-
-#section_2 {
-    width: 29.89vw;
 }
 
 #sbs {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 0;
+}
+
+/* Percentages of the 89vw content box, not of the viewport.
+   29.89vw / 89vw = 33.58%   (image is 63.08% -- see the page-specific files)
+   Sum is 96.66%, leaving the original 2.97vw of space-between. */
+#section_2 {
+    width: 33.58%;
+}
+
+@media (max-width: 700px) {
+    #sbs {
+        flex-direction: column;
+        gap: clamp(24px, 3vw, 60px);
+    }
+
+    #section_2 {
+        width: 100%;
+    }
 }
