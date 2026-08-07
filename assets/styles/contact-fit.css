@@ -1,0 +1,66 @@
+/* --- optional: make #contact fit one viewport on short screens --- */
+#contact {
+    /* One "u" == 16px at a 1080-tall viewport (matches the current rem sizing),
+       shrinking with viewport HEIGHT, floored so type stays legible. */
+    --u: clamp(11px, 1.48vh, 16px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Interpolates: 21.11vh at 1080 (unchanged), but falls away faster on
+       short viewports instead of eating half the screen. */
+    padding-top: max(36px, min(21.11vh, calc(32.5vh - 123px)));
+    padding-bottom: max(20px, min(8vh, calc(12vh - 44px)));
+}
+
+#contact center,
+#contact #lower { top: 0; }
+#contact #lower { margin-bottom: calc(var(--u) * 0.5); }
+
+#contact #lower h1 {
+    font-size: calc(var(--u) * 2);
+    margin: 0 0 calc(var(--u) * 0.6);
+}
+
+#contact #lower p,
+#contact center p,
+#contact center label {
+    font-size: calc(var(--u) * 1.2);
+    margin: 0 0 calc(var(--u) * 0.5);
+}
+
+#contact-wrap {
+    padding: calc(var(--u) * 1.6) 5.5vw;
+}
+
+#contact .form-row { gap: 2vw; }
+
+#contact .field label {
+    font-size: calc(var(--u) * 1.05);
+    margin-bottom: calc(var(--u) * 0.35);
+}
+
+#contact .field input,
+#contact .field textarea {
+    font-size: calc(var(--u) * 0.95);
+    padding: calc(var(--u) * 0.55) calc(var(--u) * 0.8);
+}
+
+#contact .field textarea {
+    min-height: calc(var(--u) * 7);
+}
+
+#contact .field-error {
+    min-height: calc(var(--u) * 0.9);
+    font-size: calc(var(--u) * 0.8);
+    margin-top: calc(var(--u) * 0.2);
+}
+
+#contact #form-footer { margin-top: calc(var(--u) * 0.4); }
+#contact #form-status { font-size: calc(var(--u) * 0.85); }
+
+#contact #send-btn {
+    font-size: calc(var(--u) * 1);
+    padding: calc(var(--u) * 0.6) calc(var(--u) * 1.9);
+}
