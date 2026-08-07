@@ -11,9 +11,145 @@
 }
 
 #contact {
-    height: 84vh;
+    height: 100vh;
+    padding-top: 21.11vh;
 }
 
 #work p {
     margin-top: 0px;
+}
+
+#contact-wrap {
+    width: min(100%, 900px);
+    margin: 0 auto;
+    padding: 8vh 5.5vw;
+    box-sizing: border-box;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 2vw;
+    flex-wrap: wrap;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 240px;
+    margin-bottom: 1.6rem;
+}
+
+.field.full {
+    flex-basis: 100%;
+}
+
+.field label {
+    font-family: "Jost_light", sans-serif;
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+}
+
+.field input,
+.field textarea {
+    font-family: "Jost_light", sans-serif;
+    font-size: 0.95rem;
+    background-color: #f1f1f1;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    padding: 0.9rem 1rem;
+    color: black;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.field input:focus,
+.field textarea:focus {
+    border-color: black;
+    background-color: #fbfbfb;
+}
+
+.field.invalid input,
+.field.invalid textarea {
+    border-color: #d64545;
+    background-color: #fdf1f1;
+}
+
+.field-error {
+    display: block;
+    min-height: 1.1rem;
+    font-size: 0.8rem;
+    color: #d64545;
+    margin-top: 0.4rem;
+}
+
+#form-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.4rem;
+    margin-top: 0.6rem;
+}
+
+#form-status {
+    margin: 0;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+#form-status[data-state="sending"] {
+    color: #777;
+}
+
+#form-status[data-state="success"] {
+    color: #2f8a4b;
+}
+
+#form-status[data-state="error"] {
+    color: #d64545;
+}
+
+#send-btn {
+    font-family: "Jost_medium", sans-serif;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 2.4rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    flex-shrink: 0;
+}
+
+#send-btn:hover {
+    transform: scale(1.03);
+}
+
+#send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    #form-footer {
+        flex-direction: column;
+        align-items: flex-end;
+    }
 }
