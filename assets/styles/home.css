@@ -1,12 +1,14 @@
 #about,
 #work,
-#contact {
+#contact,
+#banner {
     width: 100vw;
     transition: background-color 0.5s ease;
 }
 
 #about,
-#work {
+#work,
+#banner {
     height: 100vh;
 }
 
@@ -175,4 +177,8 @@ center label {
 
 #contact-email {
     color: #6e6e6e;
+}
+
+#banner img {
+    width: 100%;
 }
