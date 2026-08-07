@@ -1,13 +1,12 @@
 nav {
     height: 7vh;
-    width: 100vw;
+    width: 100%;
     background-color: white;
     position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    gap: 5vw;
+    box-sizing: border-box;
     box-shadow: 0 1vh 1vw 0 rgba(0, 0, 0, 0.05);
 }
 
@@ -17,8 +16,6 @@ nav {
     align-items: center;
     padding: 0 20px;
     gap: 2vw;
-    position: relative;
-    right: 2vw;
 }
 
 #R img {
@@ -41,27 +38,29 @@ nav {
 }
 
 nav h1 {
-    position: relative;
-    right: 5vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     font-weight: 500;
     font-size: 4vh;
 }
 
-nav h2 {
+#L h2 {
     font-weight: 300;
+    font-size: 3vh;
 }
 
-nav h2 a {
+#L h2 a {
     position: relative;
     text-decoration: none;
     color: black;
 }
 
-nav h2 a:hover {
+#L h2 a:hover {
     cursor: pointer;
 }
 
-nav h2 a::after {
+#L h2 a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -74,7 +73,7 @@ nav h2 a::after {
     transition: transform 0.3s ease;
 }
 
-nav h2 a:hover::after {
+#L h2 a:hover::after {
     transform: scaleX(1);
     transform-origin: left;
 }
