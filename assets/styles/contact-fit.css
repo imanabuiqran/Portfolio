@@ -64,3 +64,7 @@
     font-size: calc(var(--u) * 1);
     padding: calc(var(--u) * 0.6) calc(var(--u) * 1.9);
 }
+
+#contact-form {
+    text-align: left;
+}
