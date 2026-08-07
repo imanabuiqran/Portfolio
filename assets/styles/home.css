@@ -11,16 +11,79 @@
     min-height: 100vh;
 }
 
+/* ---------------------------------------------------------------
+   BANNER + OVERLAYS
+
+   The problem: object-fit:cover crops the image by a different amount
+   at every aspect ratio, so the image drifts inside #banner. Anything
+   positioned against #banner therefore drifts against the image.
+
+   The fix: #banner-stage is a box that IS the image -- same aspect
+   ratio, scaled by the cover algorithm, centred. Overlays are then
+   positioned in % of the stage, so they're locked to the artwork.
+   --------------------------------------------------------------- */
 #banner {
-    height: 100vh;
-    overflow: hidden;
+    /* v-- set this to your banner file's real pixel dimensions */
+    --banner-ar: 1600 / 900;
+    --banner-h: 100vh;
+
     position: relative;
+    width: 100%;
+    height: var(--banner-h);
+    overflow: hidden;
 }
 
-#banner img {
+#banner-stage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* the cover algorithm, written out: at least as wide as the
+       section, and (via aspect-ratio) at least as tall as it too */
+    width: max(100%, calc(var(--banner-h) * (var(--banner-ar))));
+    aspect-ratio: var(--banner-ar);
+}
+
+#banner-img {
     width: 100%;
     height: 100%;
+    display: block;
+}
+
+/* Shared behaviour for the two videos and the gif. */
+.banner-media {
+    position: absolute;
+    display: block;
     object-fit: cover;
+    border: 0;
+}
+
+/* Per-item placement. All four numbers are % of the banner image.
+   To get them, open banner.png, note the slot's pixel box, then:
+       left   = x     / imageWidth  * 100
+       top    = y     / imageHeight * 100
+       width  = w     / imageWidth  * 100
+   and set aspect-ratio to the slot's own w / h. Never set a height --
+   let aspect-ratio derive it, or the item will distort. */
+#clip-one {
+    left: 12.5%;
+    top: 16.667%;
+    width: 18.75%;
+    aspect-ratio: 300 / 180;
+}
+
+#clip-two {
+    left: 43.75%;
+    top: 46.667%;
+    width: 18.75%;
+    aspect-ratio: 300 / 180;
+}
+
+#banner-gif {
+    left: 71.875%;
+    top: 20%;
+    width: 15.625%;
+    aspect-ratio: 250 / 140;
 }
 
 #contact {
