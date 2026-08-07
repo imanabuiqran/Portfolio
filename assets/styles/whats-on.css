@@ -1,0 +1,33 @@
+#main {
+    height: 275vh;
+    width: 89vw;
+    background-color: #ececec;
+    padding-left: 5.5vw;
+    padding-right: 5.5vw;
+    padding-top: 22vh;
+    position: relative;
+    z-index: -1;
+}
+
+#main p {
+    font-size: 1.56vw;
+}
+
+#main h1 {
+    font-size: 3.38vw;
+    font-family: "Jost_medium", sans-serif;
+}
+
+#main img {
+    width: 56.14vw;
+}
+
+#section_2 {
+    width: 29.89vw;
+}
+
+#sbs {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}

@@ -1,0 +1,24 @@
+#about {
+    height: 100vh;
+    width: 100vw;
+    background-color: #ede7d9;
+}
+
+#work {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+}
+
+#contact {
+    height: 84vh;
+    width: 100vw;
+    background-color: #e9decd;
+}
+
+#footer {
+    width: 100vw;
+    height: 16vh;
+    background-color: black;
+    color: white;
+}
