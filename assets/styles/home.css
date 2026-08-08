@@ -35,11 +35,9 @@
 
 #banner-stage {
     position: absolute;
-    top: 50%;
+    top: 0;                        /* was: top: 50%; */
     left: 50%;
-    transform: translate(-50%, -50%);
-    /* the cover algorithm, written out: at least as wide as the
-       section, and (via aspect-ratio) at least as tall as it too */
+    transform: translate(-50%, -1%);   /* was: transform: translate(-50%, -50%); */
     width: max(100%, calc(var(--banner-h) * (var(--banner-ar))));
     aspect-ratio: var(--banner-ar);
 }
@@ -258,8 +256,4 @@ center label {
 
 #contact-email {
     color: #6e6e6e;
-}
-
-#buffer {
-    height: 7vh;
 }
