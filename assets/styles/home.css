@@ -64,9 +64,9 @@
    and set aspect-ratio to the slot's own w / h. Never set a height --
    let aspect-ratio derive it, or the item will distort. */
 #clip-one {
-    left: 45%;
+    left: 44.8%;
     top: 56.5%;
-    width: 22.7963541667%;
+    width: 23%;
     aspect-ratio: 3240 / 2160;
     transform: rotate(10.17deg);
 }
@@ -74,15 +74,15 @@
 #clip-two {
     left: 50.9%;
     top: 12.3%;
-    width: 22.7%;
+    width: 22.8%;
     aspect-ratio: 436.28 / 290.85;
     transform: rotate(10.17deg);
 }
 
 #banner-gif {
-    left: 70.8%;
-    top: 51.3%;
-    width: 22.79635%;
+    left: 70.7%;
+    top: 51.2%;
+    width: 23%;
     aspect-ratio: 438 / 292;
     transform: rotate(10.17deg);
 }

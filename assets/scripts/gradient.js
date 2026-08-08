@@ -9,11 +9,17 @@ window.addEventListener("scroll", () => {
     let progress = scroll / height;
 
     if (progress < 0.25) {
-        about.style.backgroundColor = "#ede7d9";
-        work.style.backgroundColor = "#ede7d9";
-        contact.style.backgroundColor = "#ede7d9";
-        banner.style.backgroundColor = "#ede7d9";
+        about.style.backgroundColor = "white";
+        work.style.backgroundColor = "white";
+        contact.style.backgroundColor = "white";
+        banner.style.backgroundColor = "white";
     } 
+    else if (progress < 0.5) {
+        about.style.backgroundColor = "white";
+        work.style.backgroundColor = "white";
+        contact.style.backgroundColor = "white";
+        banner.style.backgroundColor = "white";        
+    }
     else if (progress < 0.75) {
         about.style.backgroundColor = "white";
         work.style.backgroundColor = "white";
