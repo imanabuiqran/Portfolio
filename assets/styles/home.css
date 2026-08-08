@@ -257,3 +257,33 @@ center label {
 #contact-email {
     color: #6e6e6e;
 }
+
+#scroll-arrow {
+    position: absolute;
+    bottom: clamp(24px, 5vh, 56px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: clamp(28px, 3vw, 40px);
+    height: clamp(28px, 3vw, 40px);
+    color: white;
+    z-index: 5;
+    pointer-events: none;
+    opacity: 0;
+    animation: arrow-bob 1.6s ease-in-out infinite;
+    animation-delay: 0.6s;
+    transition: opacity 0.5s ease;
+}
+
+#scroll-arrow.visible {
+    opacity: 1;
+}
+
+#scroll-arrow.hidden {
+    opacity: 0 !important;
+    animation: none;
+}
+
+@keyframes arrow-bob {
+    0%, 100% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, 10px); }
+}
