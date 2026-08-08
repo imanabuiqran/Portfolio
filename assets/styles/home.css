@@ -24,7 +24,7 @@
    --------------------------------------------------------------- */
 #banner {
     /* v-- set this to your banner file's real pixel dimensions */
-    --banner-ar: 1600 / 900;
+    --banner-ar: 1920 / 1425;
     --banner-h: 100vh;
 
     position: relative;
@@ -66,24 +66,27 @@
    and set aspect-ratio to the slot's own w / h. Never set a height --
    let aspect-ratio derive it, or the item will distort. */
 #clip-one {
-    left: 12.5%;
-    top: 16.667%;
-    width: 18.75%;
-    aspect-ratio: 300 / 180;
+    left: 45%;
+    top: 56.5%;
+    width: 22.7963541667%;
+    aspect-ratio: 3240 / 2160;
+    transform: rotate(10.17deg);
 }
 
 #clip-two {
-    left: 43.75%;
-    top: 46.667%;
-    width: 18.75%;
-    aspect-ratio: 300 / 180;
+    left: 50.9%;
+    top: 12.3%;
+    width: 22.7%;
+    aspect-ratio: 436.28 / 290.85;
+    transform: rotate(10.17deg);
 }
 
 #banner-gif {
-    left: 71.875%;
-    top: 20%;
-    width: 15.625%;
-    aspect-ratio: 250 / 140;
+    left: 70.8%;
+    top: 51.3%;
+    width: 22.79635%;
+    aspect-ratio: 438 / 292;
+    transform: rotate(10.17deg);
 }
 
 #contact {
@@ -255,4 +258,8 @@ center label {
 
 #contact-email {
     color: #6e6e6e;
+}
+
+#buffer {
+    height: 7vh;
 }
