@@ -7,8 +7,9 @@
 }
 
 #about,
-#work {
-    min-height: 100vh;
+#work,
+#contact {
+    min-height: 93vh;
 }
 
 /* ---------------------------------------------------------------
@@ -110,7 +111,6 @@
 }
 
 #contact {
-    min-height: 100vh;
     padding-top: clamp(60px, 21.11vh, 200px);
     /* #lower and center are nudged down with position:relative/top, which
        doesn't reserve layout space -- this absorbs the shift so it can't
