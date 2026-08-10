@@ -45,3 +45,55 @@
 #main p {
     text-align: justify;
 }
+
+#page-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: clamp(60px, 8vh, 120px);
+    padding-top: clamp(24px, 4vh, 48px);
+    border-top: 1px solid #ddd;
+}
+
+#page-nav a {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #353535;
+    font-family: "Jost_medium", sans-serif;
+    font-size: clamp(0.85rem, 1.3vw, 1.15rem);
+    transition: opacity 0.25s ease;
+}
+
+#page-nav a:hover {
+    opacity: 0.55;
+}
+
+#page-nav .nav-next {
+    margin-left: auto;
+    text-align: right;
+}
+
+#page-nav svg {
+    width: clamp(16px, 1.4vw, 22px);
+    height: clamp(16px, 1.4vw, 22px);
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+}
+
+@media (max-width: 500px) {
+    #page-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    #page-nav .nav-next {
+        margin-left: 0;
+        text-align: left;
+    }
+}
