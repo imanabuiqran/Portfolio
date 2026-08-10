@@ -30,10 +30,6 @@
     margin: 0 0 calc(var(--u) * 0.5);
 }
 
-#contact-wrap {
-    padding: calc(var(--u) * 1.6) 5.5vw;
-}
-
 #contact .form-row { gap: 2vw; }
 
 #contact .field label {

@@ -126,10 +126,22 @@
     margin-top: 0px;
 }
 
+:root {
+    --contact-width: min(100%, 1200px); /* tweak this number to match the paragraph's visual width */
+}
+
+#lower {
+    width: var(--contact-width);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 5vh;
+}
+
 #contact-wrap {
-    width: min(100%, 900px);
+    width: var(--contact-width);
     margin: 0 auto;
-    padding: 8vh 5.5vw;
+    padding: clamp(24px, 1.6vh, 32px) 0; /* drop the 5.5vw side padding now that width is controlled explicitly */
     box-sizing: border-box;
 }
 
@@ -248,11 +260,6 @@
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
-}
-
-#lower {
-    position: relative;
-    top: 5vh;
 }
 
 center {
