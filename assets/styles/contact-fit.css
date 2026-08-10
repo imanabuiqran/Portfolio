@@ -7,11 +7,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 93vh;
 
     /* Interpolates: 21.11vh at 1080 (unchanged), but falls away faster on
        short viewports instead of eating half the screen. */
-    padding-top: max(36px, min(21.11vh, calc(32.5vh - 123px)));
-    padding-bottom: max(20px, min(8vh, calc(12vh - 44px)));
+    align-items: center;
 }
 
 #contact center,
@@ -26,7 +26,7 @@
 #contact #lower p,
 #contact center p,
 #contact center label {
-    font-size: calc(var(--u) * 1.2);
+    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
     margin: 0 0 calc(var(--u) * 0.5);
 }
 
@@ -37,13 +37,13 @@
 #contact .form-row { gap: 2vw; }
 
 #contact .field label {
-    font-size: calc(var(--u) * 1.05);
+    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
     margin-bottom: calc(var(--u) * 0.35);
 }
 
 #contact .field input,
 #contact .field textarea {
-    font-size: calc(var(--u) * 0.95);
+    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
     padding: calc(var(--u) * 0.55) calc(var(--u) * 0.8);
 }
 
@@ -53,7 +53,7 @@
 
 #contact .field-error {
     min-height: calc(var(--u) * 0.9);
-    font-size: calc(var(--u) * 0.8);
+    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
     margin-top: calc(var(--u) * 0.2);
 }
 
@@ -61,7 +61,7 @@
 #contact #form-status { font-size: calc(var(--u) * 0.85); }
 
 #contact #send-btn {
-    font-size: calc(var(--u) * 1);
+    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
     padding: calc(var(--u) * 0.6) calc(var(--u) * 1.9);
 }
 
