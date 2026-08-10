@@ -1,8 +1,6 @@
 #main {
     width: 100%;
     min-height: 100vh;
-    /* Side padding stays a true 5.5vw at every width so the content box is
-       always exactly 89vw -- the #sbs percentages below depend on that. */
     padding: clamp(90px, 22vh, 260px) max(24px, 5.5vw) clamp(60px, 10vh, 140px);
     position: relative;
 }
@@ -24,9 +22,6 @@
     gap: 0;
 }
 
-/* Percentages of the 89vw content box, not of the viewport.
-   29.89vw / 89vw = 33.58%   (image is 63.08% -- see the page-specific files)
-   Sum is 96.66%, leaving the original 2.97vw of space-between. */
 #section_2 {
     width: 33.58%;
 }

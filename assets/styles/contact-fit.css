@@ -1,16 +1,9 @@
-/* --- optional: make #contact fit one viewport on short screens --- */
 #contact {
-    /* One "u" == 16px at a 1080-tall viewport (matches the current rem sizing),
-       shrinking with viewport HEIGHT, floored so type stays legible. */
     --u: clamp(11px, 1.48vh, 16px);
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 93vh;
-
-    /* Interpolates: 21.11vh at 1080 (unchanged), but falls away faster on
-       short viewports instead of eating half the screen. */
     align-items: center;
 }
 

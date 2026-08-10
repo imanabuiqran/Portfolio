@@ -18,9 +18,6 @@
     box-sizing: border-box;
 }
 
-/* overflow-x lives on <html> ONLY. Putting it on <body> too forces body's
-   overflow-y to compute to `auto`, which turns body into its own scroll
-   container on top of the viewport's -> two vertical scrollbars. */
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;

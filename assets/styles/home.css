@@ -16,17 +16,6 @@
     background-color: white;
 }
 
-/* ---------------------------------------------------------------
-   BANNER + OVERLAYS
-
-   The problem: object-fit:cover crops the image by a different amount
-   at every aspect ratio, so the image drifts inside #banner. Anything
-   positioned against #banner therefore drifts against the image.
-
-   The fix: #banner-stage is a box that IS the image -- same aspect
-   ratio, scaled by the cover algorithm, centred. Overlays are then
-   positioned in % of the stage, so they're locked to the artwork.
-   --------------------------------------------------------------- */
 :root {
     --banner-ar: 1920 / 1425;
     --banner-h: 100vh;
@@ -48,9 +37,9 @@
 
 #banner-stage {
     position: absolute;
-    top: 0;                        /* was: top: 50%; */
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -1%);   /* was: transform: translate(-50%, -50%); */
+    transform: translate(-50%, -1%);
     width: max(100%, calc(var(--banner-h) * (var(--banner-ar))));
     aspect-ratio: var(--banner-ar);
 }
@@ -61,7 +50,6 @@
     display: block;
 }
 
-/* Shared behaviour for the two videos and the gif. */
 .banner-media {
     position: absolute;
     display: block;
@@ -69,13 +57,6 @@
     border: 0;
 }
 
-/* Per-item placement. All four numbers are % of the banner image.
-   To get them, open banner.png, note the slot's pixel box, then:
-       left   = x     / imageWidth  * 100
-       top    = y     / imageHeight * 100
-       width  = w     / imageWidth  * 100
-   and set aspect-ratio to the slot's own w / h. Never set a height --
-   let aspect-ratio derive it, or the item will distort. */
 #clip-one {
     left: 44.8%;
     top: 56.5%;
@@ -127,7 +108,7 @@
 }
 
 :root {
-    --contact-width: min(100%, 1200px); /* tweak this number to match the paragraph's visual width */
+    --contact-width: min(100%, 1200px);
 }
 
 #lower {
@@ -141,7 +122,7 @@
 #contact-wrap {
     width: var(--contact-width);
     margin: 0 auto;
-    padding: clamp(24px, 1.6vh, 32px) 0; /* drop the 5.5vw side padding now that width is controlled explicitly */
+    padding: clamp(24px, 1.6vh, 32px) 0;
     box-sizing: border-box;
 }
 
