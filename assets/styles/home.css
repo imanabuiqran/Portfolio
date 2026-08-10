@@ -141,13 +141,14 @@
 .form-row {
     display: flex;
     gap: 2vw;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    flex: 1 1 240px;
+    flex: 1 1 0;
+    min-width: 0;
 }
 
 .field.full {
