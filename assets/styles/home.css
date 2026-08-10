@@ -10,6 +10,10 @@
 #work,
 #contact {
     min-height: 93vh;
+}
+
+#work,
+#contact {
     background-color: white;
 }
 
@@ -377,4 +381,46 @@ center label {
     align-items: center;
     justify-content: center;
     box-shadow: 0 -4px 500px 0 rgba(0, 0, 0, 0.8);
+}
+
+#about {
+    background-color: #ececec;
+}
+
+#sbs2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(12px, 2vw, 32px);
+    position: relative;
+    z-index: 1;
+    height: 93vh
+}
+
+#RS {
+    width: 45.5vw;
+    margin-right: auto;
+}
+
+#about img {
+    margin-left: auto;
+    height: 100%;
+}
+
+#RS p {
+    font-size: 1.3928vw;
+}
+
+#RS h1 {
+    font-size: 2.5535vw;
+}
+
+#white {
+    position: absolute;
+    top: 193vh;
+    left: 0;
+    width: 100vw;
+    height: 27vh;
+    background-color: white;
+    z-index: 0;
 }
