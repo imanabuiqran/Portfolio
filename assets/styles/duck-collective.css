@@ -8,3 +8,26 @@
         width: 100%;
     }
 }
+
+#sbs-text {
+    width: 33.58%;
+}
+
+#S2 img {
+    width: 68.22vw;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.LIMG {
+    margin-right: auto;
+}
+
+.RIMG {
+    margin-left: auto;
+}
+
+#sbs img {
+    position: relative;
+    top: -10vh;
+}
