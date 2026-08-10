@@ -220,8 +220,18 @@
     color: #d64545;
 }
 
-#send-btn {
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    margin: 0;
     font-family: "Jost_medium", sans-serif;
+    font-weight: 500;
+    line-height: 1;
     background-color: black;
     color: white;
     border: none;
@@ -229,18 +239,30 @@
     padding: 0.9rem 2.4rem;
     font-size: 1rem;
     cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
     transition: transform 0.2s ease, opacity 0.2s ease;
-    flex-shrink: 0;
 }
 
-#send-btn:hover {
+.btn::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+.btn:hover {
     transform: scale(1.03);
+    opacity: 0.85;
 }
 
-#send-btn:disabled {
+.btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transform: none;
+}
+
+#send-btn {
+    flex-shrink: 0;
 }
 
 center {
@@ -370,6 +392,8 @@ center label {
 #RS {
     width: 45.5vw;
     margin-right: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 #about img {
@@ -397,28 +421,7 @@ center label {
     z-index: 0;
 }
 
-#about a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #010302;
-    color: white;
-    width: clamp(110px, 10vw, 151px);
-    min-height: clamp(48px, 6vh, 83px);
-    margin: 0 auto;
-    font-size: clamp(0.9rem, 1.3vw, 1.25rem);
-    padding: clamp(10px, 1.6vh, 19.5px) clamp(14px, 2vw, 23.5px);
-    border-radius: 18px;
-    text-align: center;
-    white-space: nowrap;
-    box-sizing: border-box;
-    position: relative;
-    z-index: 1;
-    transition: all 0.3s;
-    top: -3vh;
-}
-
-#about a:hover {
-    opacity: 0.85;
-    transform: scale(1.1);
+#RS .btn {
+    align-self: flex-end;
+    margin-top: clamp(20px, 3vh, 40px);
 }

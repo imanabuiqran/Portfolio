@@ -49,11 +49,6 @@
 #contact #form-footer { margin-top: calc(var(--u) * 0.4); }
 #contact #form-status { font-size: calc(var(--u) * 0.85); }
 
-#contact #send-btn {
-    font-size: clamp(1rem, 1.3928vw, 1.6713rem);
-    padding: calc(var(--u) * 0.6) calc(var(--u) * 1.9);
-}
-
 #contact-form {
     text-align: left;
 }
