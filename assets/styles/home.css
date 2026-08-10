@@ -23,15 +23,23 @@
    ratio, scaled by the cover algorithm, centred. Overlays are then
    positioned in % of the stage, so they're locked to the artwork.
    --------------------------------------------------------------- */
-#banner {
-    /* v-- set this to your banner file's real pixel dimensions */
+:root {
     --banner-ar: 1920 / 1425;
     --banner-h: 100vh;
+}
 
-    position: relative;
+#banner {
+    position: fixed;
     width: 100%;
     height: var(--banner-h);
     overflow: hidden;
+    z-index: -18;
+}
+
+#buffer {
+    height: var(--banner-h);
+    position: relative;
+    z-index: -20;
 }
 
 #banner-stage {
@@ -367,4 +375,5 @@ center label {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 0 -4px 500px 0 rgba(0, 0, 0, 0.8);
 }
