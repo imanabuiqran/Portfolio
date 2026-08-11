@@ -21,7 +21,7 @@
 html {
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 7vh;
+    scroll-padding-top: var(--nav-h);
 }
 
 body {

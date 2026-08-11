@@ -1,5 +1,9 @@
+:root {
+    --nav-h: clamp(56px, 7vh, 88px); /* shared with default.css scroll-padding-top */
+}
+
 nav {
-    height: clamp(56px, 7vh, 88px);
+    min-height: var(--nav-h);
     width: 100%;
     background-color: white;
     position: fixed;
