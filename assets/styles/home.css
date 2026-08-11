@@ -100,14 +100,14 @@
 }
 
 #text h1 {
-    font-size: clamp(1.75rem, 3.39vw, 4.0625rem); /* was cqw with no container-type set anywhere, so it never scaled */
+    font-size: clamp(1.75rem, 3.39vw, 4.0625rem);
     font-family: "Jost_medium", sans-serif;
     margin: 0 0 0.4em;
     line-height: 1.15;
 }
 
 #text p {
-    font-size: clamp(1.1rem, 2.08vw, 2.5rem); /* same cqw fix as #text h1 */
+    font-size: clamp(1.1rem, 2.08vw, 2.5rem);
     font-family: "Jost_light", sans-serif;
     margin: 0;
     line-height: 1.4;
@@ -363,7 +363,7 @@ center label {
     justify-content: center;
     color: white;
     font-family: "Jost_medium", sans-serif;
-    font-size: clamp(1.75rem, 3.39vw, 4.0625rem); /* same cqw fix */
+    font-size: clamp(1.75rem, 3.39vw, 4.0625rem);
     text-align: center;
     padding: 0 1.5rem;
     opacity: 0;
@@ -385,8 +385,8 @@ center label {
 
 #about {
     background-color: #ececec;
-    min-height: 105vh; /* was a fixed height; min-height lets it grow instead of spilling into #contact */
-    position: relative; /* anchor point for #white below, instead of a page-wide offset */
+    min-height: 105vh;
+    position: relative;
 }
 
 #sbs2 {
@@ -424,7 +424,7 @@ center label {
 
 #white {
     position: absolute;
-    top: 0; /* relative to #about now (see position: relative above), not a hardcoded page-scroll offset */
+    top: 0;
     left: 0;
     width: 100%;
     height: 30vh;
