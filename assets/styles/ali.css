@@ -4,6 +4,10 @@
 
 #list img {
     width: 90vw;
-    margin-top: 0.25vh;
-    margin-bottom: 0.25vh;
+    margin-top: 2.5vh;
+    margin-bottom: 2.5vh;
+}
+
+p {
+    margin-bottom: 5vh;
 }

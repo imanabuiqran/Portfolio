@@ -1,7 +1,7 @@
 #main {
     width: 100%;
     min-height: 100vh;
-    padding: clamp(90px, 22vh, 260px) max(24px, 5.5vw) clamp(60px, 10vh, 140px);
+    padding: clamp(90px, 20vh, 260px) max(24px, 5.5vw) clamp(60px, 10vh, 140px);
     position: relative;
 }
 
