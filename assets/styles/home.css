@@ -459,6 +459,6 @@ center label {
     }
 
     #sbs2 img {
-        display: hidden;
+        display: none;
     }
 }
