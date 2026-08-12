@@ -447,6 +447,10 @@ center label {
     width: 68%;
 }
 
+#menu-button {
+    display: none;
+}
+
 @media (orientation: portrait) {
     #project-grid {
         grid-template-columns: repeat(1, 42vw);
@@ -482,5 +486,52 @@ center label {
     #about .btn {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    #menu-button {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5vh;
+    right: 5vh;
+    }
+
+    #menu-button span {
+        position: absolute;
+        left: 5px;
+
+        width: 30px;
+        height: 3px;
+
+        background: #353535;
+        border-radius: 2px;
+
+        transition:
+            transform 0.3s ease,
+            top 0.3s ease;
+    }
+
+    /* Hamburger */
+    #menu-button span:first-child {
+        top: 13px;
+    }
+
+    #menu-button span:last-child {
+        top: 25px;
+    }
+
+    /* X */
+    #menu-button.active span:first-child {
+        top: 19px;
+        transform: rotate(45deg);
+    }
+
+    #menu-button.active span:last-child {
+        top: 19px;
+        transform: rotate(-45deg);
     }
 }
