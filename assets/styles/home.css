@@ -449,8 +449,8 @@ center label {
 
 @media (orientation: portrait) {
     #project-grid {
-        grid-template-columns: repeat(2, 42vw);
-        grid-template-rows: repeat(3, 23.625vw);
+        grid-template-columns: repeat(1, 42vw);
+        grid-template-rows: repeat(6, 23.625vw);
     }
 
     .project-tile {
