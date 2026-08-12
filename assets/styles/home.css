@@ -442,3 +442,23 @@ center label {
     left: 5.5vw;
     font-size: clamp(1.75rem, 2.5535vw, 3.0625rem);
 }
+
+#text p {
+    width: 68%;
+}
+
+@media (orientation: portrait) {
+    #project-grid {
+        grid-template-columns: repeat(2, 42vw);
+        grid-template-rows: repeat(3, 23.625vw);
+    }
+
+    .project-tile {
+        width: 42vw;
+        height: 23.625vw;
+    }
+
+    #sbs2 img {
+        display: hidden;
+    }
+}

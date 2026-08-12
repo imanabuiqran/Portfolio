@@ -2,6 +2,13 @@
     width: 100%;
 }
 
+#vids {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 video {
-    width: 33%;
+    width: 32%;
 }
