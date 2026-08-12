@@ -457,10 +457,18 @@ center label {
         width: 42vw;
         height: 23.625vw;
     }
-
-    @media (orientation: portrait) {
+    
     #flower {
         display: none;
+    }
+
+    #sbs2 {
+        justify-content: center;
+    }
+
+    #RS {
+        width: 100%;
+        margin-right: 0;
     }
 
     #about {
@@ -475,5 +483,4 @@ center label {
         margin-left: auto;
         margin-right: auto;
     }
-}
 }
