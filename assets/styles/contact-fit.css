@@ -55,42 +55,7 @@
 
 @media (orientation: portrait) {
     #contact {
-        --u: clamp(8px, 1.1vh, 12px);
-        min-height: 100vh;
-    }
-
-    #contact #lower h1 {
-        font-size: clamp(1.5rem, 5vw, 2.2rem);
-        margin: 2vh 0 calc(var(--u) * 0.5);
-    }
-
-    #contact #lower p,
-    #contact center p,
-    #contact center label {
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
-    }
-
-    #contact .field label {
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
-    }
-
-    #contact .field input,
-    #contact .field textarea {
-        font-size: clamp(0.8rem, 3.5vw, 1rem);
-        padding: calc(var(--u) * 0.4) calc(var(--u) * 0.6);
-    }
-
-    #contact .field textarea {
-        min-height: calc(var(--u) * 5);
-    }
-
-    #contact .field-error {
-        min-height: calc(var(--u) * 0.7);
-        font-size: 0.75rem;
-        margin-top: calc(var(--u) * 0.15);
-    }
-
-    #contact #form-footer {
-        margin-top: calc(var(--u) * 0.3);
+        width: 80vw;
+        margin: 0 auto;
     }
 }
