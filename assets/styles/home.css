@@ -453,13 +453,13 @@ center label {
 
 @media (orientation: portrait) {
     #project-grid {
-        grid-template-columns: repeat(1, 42vw);
-        grid-template-rows: repeat(6, 23.625vw);
+        grid-template-columns: repeat(1, 90vw);
+        grid-template-rows: repeat(6, 50.6vw);
     }
 
     .project-tile {
-        width: 42vw;
-        height: 23.625vw;
+        width: 90vw;
+        height: 50.6vw;
     }
     
     #flower {

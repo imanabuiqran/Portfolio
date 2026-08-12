@@ -185,40 +185,28 @@ nav h1 {
         display: none;
     }
 
+    #R {
+        justify-self: end;
+    }
+
     #nav-toggle {
         display: flex;
+        position: absolute;
+        top: 50%;
+        right: clamp(16px, 2vw, 40px);
+        transform: translateY(-50%);
+    }
+
+    nav h1 {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 }
 
 @media (orientation: landscape) {
     #mobile-overlay {
         display: none !important;
-    }
-}
-
-@media (orientation: portrait) {
-    nav {
-        background-color: transparent;
-    }
-
-    #L,
-    #R {
-        display: none;
-    }
-
-    nav h1 {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0;
-        font-weight: 500;
-        font-size: clamp(1.25rem, 1.5625vw, 2.4rem);
-        white-space: nowrap;
-    }
-}
-
-@media (orientation: landscape) {
-    nav {
-        box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.05);
     }
 }
