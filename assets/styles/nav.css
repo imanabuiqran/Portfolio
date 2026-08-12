@@ -87,6 +87,115 @@ nav h1 {
     transform-origin: left;
 }
 
+/* Mobile nav toggle */
+#nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+#nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#nav-toggle.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+#nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+#nav-toggle.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+#mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: white;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(24px, 5vh, 48px);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+#mobile-overlay.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s linear 0s;
+}
+
+#mobile-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(20px, 4vh, 40px);
+}
+
+#mobile-links h2 {
+    font-weight: 300;
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+    margin: 0;
+}
+
+#mobile-links h2 a {
+    color: black;
+    text-decoration: none;
+}
+
+#mobile-social {
+    position: fixed;
+    bottom: clamp(24px, 5vh, 48px);
+    left: clamp(16px, 5vw, 40px);
+    display: flex;
+    gap: clamp(16px, 2.5vh, 24px);
+}
+
+#mobile-social img {
+    height: clamp(20px, 2.6vh, 30px);
+    width: auto;
+}
+
+@media (orientation: portrait) {
+    #L {
+        display: none;
+    }
+
+    #R a {
+        display: none;
+    }
+
+    #nav-toggle {
+        display: flex;
+    }
+}
+
+@media (orientation: landscape) {
+    #mobile-overlay {
+        display: none !important;
+    }
+}
+
 @media (orientation: portrait) {
     nav {
         background-color: transparent;
