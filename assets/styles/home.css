@@ -458,7 +458,22 @@ center label {
         height: 23.625vw;
     }
 
-    #sbs2 img {
-        visibility: hidden;
+    @media (orientation: portrait) {
+    #flower {
+        display: none;
     }
+
+    #about {
+        text-align: center;
+    }
+
+    #about p {
+        text-align: center;
+    }
+
+    #about .btn {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 }
