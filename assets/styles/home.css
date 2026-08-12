@@ -471,7 +471,7 @@ center label {
     }
 
     #RS {
-        width: 100%;
+        width: 90%;
         margin-right: 0;
     }
 
@@ -533,5 +533,9 @@ center label {
     #menu-button.active span:last-child {
         top: 19px;
         transform: rotate(-45deg);
+    }
+
+    #white {
+        height: 10vh;
     }
 }
