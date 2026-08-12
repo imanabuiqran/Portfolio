@@ -473,6 +473,7 @@ center label {
     #RS {
         width: 90%;
         margin-right: 0;
+        text-align: left;
     }
 
     #about {

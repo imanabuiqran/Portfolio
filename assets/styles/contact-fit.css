@@ -55,7 +55,9 @@
 
 @media (orientation: portrait) {
     #contact {
-        width: 50vw;
+        width: 85vw;
+        min-height: auto;
+        padding: 8vh 0;
         margin: 0 auto;
     }
 }
