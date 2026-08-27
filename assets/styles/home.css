@@ -14,6 +14,13 @@
 #work,
 #contact {
     background-color: white;
+    position: relative;
+    z-index: 10;
+}
+
+#about {
+    position: relative;
+    z-index: 11;
 }
 
 :root {
@@ -438,7 +445,7 @@ center label {
 
 #work h1 {
     position: absolute;
-    top: 105vh;
+    top: 5vh;
     left: 5.5vw;
     font-size: clamp(1.75rem, 2.5535vw, 3.0625rem);
 }
@@ -538,5 +545,16 @@ center label {
 
     #white {
         height: 10vh;
+    }
+}
+
+@media (orientation: landscape) {
+    #buffer {
+        height: 100%;
+    }
+
+    #banner-wrap {
+        position: sticky;
+        top: 0px;
     }
 }

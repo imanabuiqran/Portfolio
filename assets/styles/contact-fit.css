@@ -53,6 +53,10 @@
     text-align: left;
 }
 
+#message {
+    max-height: 20vh;
+}
+
 @media (orientation: portrait) {
     #contact {
         width: 100%;
